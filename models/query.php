@@ -22,7 +22,7 @@ class Query {
 
 	}
 
-	public function bindPrepare(array $params): void
+	public function bindPrepare(array $params)
 	{
 		/*
 		prefixe sur trois lettres suivi d'un underscore
@@ -69,7 +69,7 @@ class Query {
 	}
 
 
-	public function executeQuery(string $query, array $params = array()): void
+	public function executeQuery(string $query, array $params = array())
 	{
 		$this->stmt = $this->cnx->prepare($query);
 
@@ -81,7 +81,7 @@ class Query {
 	}
 
 
-	public function sqlManyResults(string $query, array $params = array()): array 
+	public function sqlManyResults(string $query, array $params = array())
 	{
 		$data = array();
 
@@ -97,7 +97,7 @@ class Query {
 	}
 
 
-	public function sqlManyResultsArray(string $query, array $params = array()): array 
+	public function sqlManyResultsArray(string $query, array $params = array())
 	{
 		$data = array();
 
@@ -113,7 +113,7 @@ class Query {
 	}
 
 
-	public function sqlSingleResult(string $query, array $params = array()): object
+	public function sqlSingleResult(string $query, array $params = array())
 	{
 		$data = array();
 
@@ -126,7 +126,7 @@ class Query {
 		return $data;
 	}
 
-	public function sqlFields(string $table): array {
+	public function sqlFields(string $table) {
 		$data = array();
 		$champs = array();
 
@@ -140,7 +140,7 @@ class Query {
 	}
 
 
-	public function sqlSimpleQuery($query, $params = array()): bool
+	public function sqlSimpleQuery(string $query, array $params = array())
 	{
 		$result = $this->executeQuery($query, $params);
 		return $result;

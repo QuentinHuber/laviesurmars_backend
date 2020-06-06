@@ -1,20 +1,21 @@
 <?php 
-    /*
+    
     header('Access-Control-Allow-Origin: *');
-    header('Content-Type: application/json');
-    $data = $_REQUEST;
-    $data["method"]=$_SERVER['REQUEST_METHOD'];
-    echo json_encode($data);
-    */
-    header('Access-Control-Allow-Origin: *');
-   // header('Access-Control-Allow-Headers: *Content-Type');
-   // header('Content-Type: application/json');
-   
     header('Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS');
+    include(dirname(__FILE__).'/../init.php');
     
     // Reading JSON POST using PHP
     $json = file_get_contents('php://input');
-    $jsonObj = json_decode($json);
-    $data = array("test"=>"test");
-    echo json_encode($data);
+    $data = json_decode($json);
+    $result = array();
+    //$data = array('username'=> 'admin', 'password'=> '123456');
+    // $login = $adm->login($data['username'], $data['password']);
+    //$result = $login ? $login : 'notFound';
+    $result['data'] = $data->{'username'};
+
+    echo json_encode($result);
+
+
+
+    include(dirname(__FILE__).'/../close.php');
 ?>

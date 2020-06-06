@@ -11,7 +11,7 @@ class Objects {
 	}
 
 
-	public function load(int $id, string $table): object
+	public function load(int $id, string $table)
 	{
 		global $db;
 
@@ -36,7 +36,7 @@ class Objects {
 		return $this;
 	}
 
-	public function save(): void
+	public function save()
 	{
 		global $db;
 
@@ -115,7 +115,7 @@ class Objects {
 		}
 	}
 
-	public static function objectsList(string $table, ?string $where = NULL, ?array $params = NULL, $order = 1, string $direction = 'ASC', ?int $limit = NULL): array {
+	public static function objectsList(string $table, ?string $where = NULL, ?array $params = NULL, $order = 1, string $direction = 'ASC', ?int $limit = NULL) {
 		global $db;
 
 		$query = "SELECT * FROM $table ";

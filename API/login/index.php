@@ -14,11 +14,11 @@
         $login = $adm->login($data["data"]['username'], $data["data"]['password']);
         
         $result["data"]["return"] = $login ? $login : 'notFound';
-        $result["data"]["error"] = null;
+        $result["data"]["error"] = false;
     }
     else{
-        $result["data"]["error"] = "Ce n'est pas un tableau";
-        $result["data"]["return"] = null;
+        $result["data"]["error"] = 'Ce n\'est pas un tableau';
+        $result["data"]["return"] = false;
     }
     echo json_encode($result);
 

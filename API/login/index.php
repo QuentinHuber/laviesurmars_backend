@@ -6,13 +6,20 @@
     
     // Reading JSON POST using PHP
     $json = file_get_contents('php://input');
-    $data = json_decode($json);
+    $data = json_decode($json, true);
     $result = array();
-    //$data = array('username'=> 'admin', 'password'=> '123456');
-    // $login = $adm->login($data['username'], $data['password']);
-    //$result = $login ? $login : 'notFound';
-    $result['data'] = $data->{'username'};
 
+    if(is_array($data))
+    {
+        $login = $adm->login($data["data"]['username'], $data["data"]['password']);
+        
+        $result["data"]["return"] = $login ? $login : 'notFound';
+        $result["data"]["error"] = null;
+    }
+    else{
+        $result["data"]["error"] = "Ce n'est pas un tableau";
+        $result["data"]["return"] = null;
+    }
     echo json_encode($result);
 
 

@@ -78,7 +78,7 @@ class Admin {
     }
     
 
-    public function changePass(array $dataForm)
+    public function changePass(array $dataForm): void
 	{
 		global $db;
 		global $cmn;

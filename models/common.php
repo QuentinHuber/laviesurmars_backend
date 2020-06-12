@@ -32,23 +32,22 @@ class Common {
 	{
 		$tmp_name = $file['tmp_name'];
 		$name 	  = round(microtime(true)).'.'.$extension;
-		move_uploaded_file($tmp_name,$destination_dir.$name);
-		
+		$destination = dirname(__DIR__).'/'.$destination_dir;
+		move_uploaded_file($tmp_name,$destination.$name);
 		return $name;
 	}
 	
-	public function uploadFile(array $file, string $destination, array $aurorise): ?string 
+	public function uploadFile(array $file, string $destination, array $autorise): ?string 
 	{
-		// $destination = dirname(__DIR__).$destination_dir;
+		
 		 $extre = explode('.',$file['name']);
 		 $extension = end($extre);
 
-		 if(in_array($extension,$aurorise)){
-			return upload($file, $extension, $destination_dir);
+		 if(in_array($extension,$autorise)){
+			return $this->upload($file, $extension, $destination);
 		 }
 		
-		 return null;
-		
+		 return null;	
 	}
 
 	public function sizeImage(array $file, int $t): bool 

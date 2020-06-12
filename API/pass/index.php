@@ -1,6 +1,4 @@
 <?php
-header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS');
 include(dirname(__FILE__).'/../init.php');
 
     // Reading JSON POST using PHP

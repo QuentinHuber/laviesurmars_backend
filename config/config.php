@@ -4,9 +4,7 @@
 **/
 
 // global
-const SITE_ROOT 	= '';
-const SITE_ROOT_ADMIN 	= '';
-const SITE_REP    = '';
+const SITE_ROOT 	= 'http://192.168.0.48:80/laviesurmars_backend/';
 
 // mysql
 // base de données

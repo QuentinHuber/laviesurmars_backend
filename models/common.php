@@ -50,6 +50,14 @@ class Common {
 		 return null;	
 	}
 
+	public function uploadOnlyFile(array $file, string $destination): string 
+	{	
+		$extre = explode('.',$file['name']);
+		$extension = end($extre);
+
+		return $this->upload($file, $extension, $destination);
+	}
+
 	public function sizeImage(array $file, int $t): bool 
 	{
 		$taille = $file['size'];

@@ -3,29 +3,40 @@
  * fichier de configuration qui déclare toutes les constantes utilisées dans les classes
 **/
 
-// global
-const SITE_ROOT 	= 'http://192.168.0.48:80/laviesurmars_backend/';
+// global local
+ const SITE_ROOT 	= 'http://192.168.0.48:80/laviesurmars_backend/';
+
+// global online
+// const SITE_ROOT 	= 'https://e-cine.xyz/laviesurmars_backend/';
+// http://192.168.0.48:80
 
 // mysql
-// base de données
+// base de données Local
+
 const BDD_SGBD = 'mysql';
 const BDD_DATABASE	= 'laviesurmars';
 const BDD_HOST 		= 'localhost';
 const BDD_PASSWORD	= '';
 const BDD_USER		= 'root';
 
+// base de données online
+/*
+const BDD_SGBD = 'mysql';
+const BDD_DATABASE	= 'ecine1359178';
+const BDD_HOST 		= '185.98.131.109';
+const BDD_PASSWORD	= 'r8r86ya5nq';
+const BDD_USER		= 'ecine1359178';
+*/
+
+
 // tables principales
-const TABLE_ADM		= 't_admin_adm';
+const TABLE_ADM		= 't_admins_adm';
 const TABLE_ART		= 't_article_art';
-const TABLE_AUT		= 't_autors_aut';
 const TABLE_LOG		= 't_login_log';
-const TABLE_MSU		= 't_media_subject_msu';
 const TABLE_SUB		= 't_subject_sub';
-const TABLE_USR		= 't_users_usr';
-
-// tables de jointure
-const TABLE_JAR		= 'tj_autor_article_jar';
-
+const TABLE_USR		= 't_user_usr';
+const TABLE_TYA     = 't_type_article_tya';
+const TABLE_FEA     = 't_features_fea';
 // expéditeur mail
 const EXP_MAIL		= 'jarce.boukoro@hetic.net'; //kT7@zdmzTK
 

@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Status](https://img.shields.io/badge/Status-developing-brightgreen) ![PHP](https://img.shields.io/badge/php-v7.4.6%20-blue) [![HETIC](https://img.shields.io/badge/HETIC-ecole-brightgreen)](https://www.hetic.net/)
+![Status](https://img.shields.io/badge/Status-developing-brightgreen) [![HETIC](https://img.shields.io/badge/HETIC-ecole-brightgreen)](https://www.hetic.net/) ![PHP](https://img.shields.io/badge/PHP-v7.4.6%20-4f5b93) 
 
 </div>
 

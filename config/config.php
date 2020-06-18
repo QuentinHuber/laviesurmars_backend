@@ -4,7 +4,7 @@
 **/
 
 // global local
- const SITE_ROOT 	= 'http://192.168.0.48:80/laviesurmars_backend/';
+ const SITE_ROOT 	= 'https://e-cine.xyz/laviesurmars_backend/';
 
 // global online
 // const SITE_ROOT 	= 'https://e-cine.xyz/laviesurmars_backend/';
@@ -12,21 +12,21 @@
 
 // mysql
 // base de données Local
-
+/*
 const BDD_SGBD = 'mysql';
 const BDD_DATABASE	= 'laviesurmars';
 const BDD_HOST 		= 'localhost';
 const BDD_PASSWORD	= '';
 const BDD_USER		= 'root';
-
+*/
 // base de données online
-/*
+
 const BDD_SGBD = 'mysql';
 const BDD_DATABASE	= 'ecine1359178';
 const BDD_HOST 		= '185.98.131.109';
 const BDD_PASSWORD	= 'r8r86ya5nq';
 const BDD_USER		= 'ecine1359178';
-*/
+
 
 
 // tables principales
